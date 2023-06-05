@@ -1,0 +1,20 @@
+PODS:
+  - SwiftSignatureView (3.2.0)
+  - TouchDraw (2.1.2)
+
+DEPENDENCIES:
+  - SwiftSignatureView
+  - TouchDraw
+
+SPEC REPOS:
+  trunk:
+    - SwiftSignatureView
+    - TouchDraw
+
+SPEC CHECKSUMS:
+  SwiftSignatureView: cd8cca297cc2ca6a6c174da22fb908c33d03d3c0
+  TouchDraw: 80b52af0e29354473205ffb478c881683d770475
+
+PODFILE CHECKSUM: 744c85c0214b9c14fe90acc96fa32d4c25f5081c
+
+COCOAPODS: 1.11.3

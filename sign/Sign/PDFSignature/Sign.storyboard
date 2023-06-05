@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="sign" id="vXZ-lx-hvc" customClass="SignViewController" customModule="PDFSignature" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-Y3-ll7" customClass="SwiftSignatureView" customModule="SwiftSignatureView">
+                                <rect key="frame" x="20" y="73" width="984" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="j9f-x6-0JQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumStrokeWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" systemColor="systemBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumStrokeWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeAlpha">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxB-EY-lJP" userLabel="Sign below label">
+                                <rect key="frame" x="20" y="32" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cropped view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGw-KJ-Cpg" userLabel="Cropped view label">
+                                <rect key="frame" x="20" y="483" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35w-zR-awq" userLabel="Cropped View">
+                                <rect key="frame" x="20" y="523" width="984" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="tUC-sA-5eX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dn-5I-1wr">
+                                <rect key="frame" x="968" y="32" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="didTapClear" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ehw-5w-7Hb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0f-7r-97U">
+                                <rect key="frame" x="924" y="32" width="36" height="30"/>
+                                <state key="normal" title="Redo"/>
+                                <connections>
+                                    <action selector="didTapRedo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AzA-CZ-7m5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-vi-asR">
+                                <rect key="frame" x="879" y="32" width="37" height="30"/>
+                                <state key="normal" title="Undo"/>
+                                <connections>
+                                    <action selector="didTapUndo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hhq-lk-YQ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJs-BI-m5T" userLabel="Refresh">
+                                <rect key="frame" x="951" y="483" width="53" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="Refresh"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="didTapRefreshCroppedSignature" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5qz-dO-XG9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urO-xa-tcZ">
+                                <rect key="frame" x="472.5" y="753" width="79" height="30"/>
+                                <state key="normal" title="Page Sheet"/>
+                                <connections>
+                                    <segue destination="eXq-Lm-0Fu" kind="show" id="HXs-aa-S8G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJA-qy-8s7">
+                                <rect key="frame" x="484.5" y="813" width="55" height="30"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapConfirm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9y4-CA-8zf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="35w-zR-awq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="6eW-ER-OAa"/>
+                            <constraint firstItem="WWx-Y3-ll7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="CKG-Hv-zfW"/>
+                            <constraint firstItem="fGw-KJ-Cpg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Cjw-3O-YQ5"/>
+                            <constraint firstItem="35w-zR-awq" firstAttribute="top" secondItem="WWx-Y3-ll7" secondAttribute="bottom" constant="50" id="Cx4-0z-2Kf"/>
+                            <constraint firstItem="8Dn-5I-1wr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Dag-dB-Kf8"/>
+                            <constraint firstItem="T0f-7r-97U" firstAttribute="leading" secondItem="dad-vi-asR" secondAttribute="trailing" constant="8" id="EzD-3D-fXC"/>
+                            <constraint firstItem="urO-xa-tcZ" firstAttribute="top" secondItem="35w-zR-awq" secondAttribute="bottom" constant="30" id="Fvv-DK-oTN"/>
+                            <constraint firstItem="ZJs-BI-m5T" firstAttribute="top" secondItem="WWx-Y3-ll7" secondAttribute="bottom" constant="10" id="Hkx-nn-TWi"/>
+                            <constraint firstItem="35w-zR-awq" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="J7r-yc-EDj"/>
+                            <constraint firstItem="nJA-qy-8s7" firstAttribute="top" secondItem="urO-xa-tcZ" secondAttribute="bottom" constant="30" id="JPl-hM-y5S"/>
+                            <constraint firstItem="dad-vi-asR" firstAttribute="centerY" secondItem="T0f-7r-97U" secondAttribute="centerY" id="NSR-cU-2cu"/>
+                            <constraint firstItem="BxB-EY-lJP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="NfI-5h-fj4"/>
+                            <constraint firstItem="BxB-EY-lJP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Qxk-J3-OyR"/>
+                            <constraint firstItem="WWx-Y3-ll7" firstAttribute="top" secondItem="BxB-EY-lJP" secondAttribute="bottom" constant="20" id="SCA-m3-pfL"/>
+                            <constraint firstItem="ZJs-BI-m5T" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="VZX-cK-7yn"/>
+                            <constraint firstItem="8Dn-5I-1wr" firstAttribute="leading" secondItem="T0f-7r-97U" secondAttribute="trailing" constant="8" id="Vul-6P-BqF"/>
+                            <constraint firstItem="nJA-qy-8s7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="dFa-rr-AQS"/>
+                            <constraint firstItem="urO-xa-tcZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="eET-cU-NRZ"/>
+                            <constraint firstItem="WWx-Y3-ll7" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="mRi-Ea-4WW"/>
+                            <constraint firstItem="fGw-KJ-Cpg" firstAttribute="top" secondItem="WWx-Y3-ll7" secondAttribute="bottom" constant="10" id="nf4-iY-p3z"/>
+                            <constraint firstItem="8Dn-5I-1wr" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="oMT-GF-hAi"/>
+                            <constraint firstItem="T0f-7r-97U" firstAttribute="centerY" secondItem="8Dn-5I-1wr" secondAttribute="centerY" id="pg7-7t-hDp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="croppedSignatureView" destination="35w-zR-awq" id="HRu-78-9t8"/>
+                        <outlet property="signatureView" destination="WWx-Y3-ll7" id="egY-uO-3Sl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.73913043478262" y="302.00892857142856"/>
+        </scene>
+        <!--Page Sheet View Controller-->
+        <scene sceneID="Vj9-PK-QbF">
+            <objects>
+                <viewController id="eXq-Lm-0Fu" customClass="PageSheetViewController" customModule="PDFSignature" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mn1-aZ-HqD"/>
+                        <viewControllerLayoutGuide type="bottom" id="OLx-Ld-tuD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qya-za-oh8">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yAy-lv-tXh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGf-9g-qy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="302"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
